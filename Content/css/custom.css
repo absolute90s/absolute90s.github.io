@@ -1,0 +1,1315 @@
+/*
+Theme Name: Kudos Creative
+Theme URI: http://themes.kudosthemes.co.uk/kudoscreative
+Description: A creative, responsive HTML template.
+Author: Paul Allen
+Author URI: http://themeforest.net/user/KudosThemes
+Version: 1.0
+*/
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  
+  Table of contents
+
+  1. Loader
+
+  2. Global
+
+  3. Typography
+
+  4. Shortcodes
+
+  5. Parallax Backgrounds
+
+  6. Headers
+
+  7. Section Headers
+
+  8. Skills
+
+  9. Team
+
+  10. Services
+
+  11. Portfolio
+
+  12. Call to Action
+
+  13. Pricing Tables
+
+  14. Testimonials
+
+  15. Clients
+
+  16. Company Stats
+
+  17. Twitter
+
+  18. Contact
+
+  19. Offices
+
+  20. Google Map
+
+  21. Footer
+
+  22. Colour Scheme (AT THE BOTTOM)
+
+  ***************************************************************************
+=============================================================================*/
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Loader
+  ***************************************************************************
+=============================================================================*/
+
+.page-loader { width: 100%; height: 100%; position: fixed; background: #000; z-index: 99999; text-align: center;}
+.loader { display: block; width: 30px; height: 30px; position: relative; top: 50%; left: 50%; margin-left: -15px; margin-top: -15px; -webkit-animation: loader 4s infinite ease; animation: loader 4s infinite ease;}
+.loader-fill { width: 100%; vertical-align: top; display: inline-block; -webkit-animation: loader-inner 4s infinite ease-in; animation: loader-inner 4s infinite ease-in;}
+@-webkit-keyframes loader {
+  0% { -webkit-transform: rotate(0deg);}
+  25% { -webkit-transform: rotate(180deg);}
+  50% { -webkit-transform: rotate(180deg);}
+  75% { -webkit-transform: rotate(360deg);}
+  100% { -webkit-transform: rotate(360deg);}
+}
+@-webkit-keyframes loader-inner {
+  0% { height: 0%;}
+  25% { height: 0%;}
+  50% { height: 100%;}
+  75% { height: 100%;}
+  100% { height: 0%;}
+}
+@keyframes loader {
+  0% { transform: rotate(0deg);}
+  25% { transform: rotate(180deg);}
+  50% { transform: rotate(180deg);}
+  75% { transform: rotate(360deg);}
+  100% { transform: rotate(360deg);}
+}
+@keyframes loader-inner {
+  0% { height: 0%;}
+  25% { height: 0%;}
+  50% { height: 100%;}
+  75% { height: 100%;}
+  100% { height: 0%;}
+}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Global
+  ***************************************************************************
+=============================================================================*/
+
+* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; -o-box-sizing: border-box; box-sizing: border-box;}
+
+/*========== Inputs ==========*/
+input,
+textarea { -webkit-appearance: none; outline: none; border: none; font-size: 16px;}
+button:focus { outline: none;}
+::-webkit-input-placeholder { color: #fff;}
+:-moz-placeholder { color: #fff;}
+::-moz-placeholder { color: #fff;}
+:-ms-input-placeholder { color: #fff;}
+
+
+/*========== Images ==========*/
+img { max-width: 100%; width: 100%;}
+
+
+/*========== Overlays ==========*/
+.overlay-dot { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1; background: url('../images/overlay-dot.png') repeat;}
+.overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 1; background: rgba(0,0,0,0.6);}
+.grey-section { background: #fafafa; border-top: 1px solid #eee; border-bottom: 1px solid #eee;}
+.light-section { background: #222;}
+
+
+/*========== Sections ==========*/
+.section-pad { padding: 20px 0;}
+
+
+/*========== Container ==========*/
+.container { position: relative; z-index: 900;}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Typography
+  ***************************************************************************
+=============================================================================*/
+
+html,body,input,textarea,strong,i { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: 'Open Sans', sans-serif;}
+
+h1,h2,h3,h4,h5,h6 { color: #4e4e4e; margin: 5px 0 15px 0;}
+
+h1 { font-size: 41px; line-height: 56px;}
+h2 { font-size: 34px; line-height: 48px;}
+h3 { font-size: 18px; line-height: 30px;}
+h4 { font-size: 16px; line-height: 28px;}
+h5 { font-size: 14px; line-height: 22px;}
+h6 { font-size: 12px; line-height: 18px;}
+
+p,
+li { color: #898989; font-size: 14px; line-height: 22px; margin: 0 0 15px 0;}
+
+i { color: #898989;}
+
+a { outline: none !important;}
+a:hover,
+a:focus { text-decoration: none; outline: none !important;}
+
+html,body { overflow-x: hidden; background-color: #222;}
+
+ul { list-style: none; margin: 0; padding: 0;}
+
+p.bold,
+a.bold,
+.bold { font-weight: 900;}
+
+.dark-section p,
+.dark-section h1,
+.dark-section h2,
+.dark-section h3,
+.dark-section h4,
+.dark-section h5,
+.dark-section strong,
+.dark-section li,
+.colour-section p,
+.colour-section h1,
+.colour-section h2,
+.colour-section h3,
+.colour-section h4,
+.colour-section h5,
+.colour-section strong,
+.colour-section li,
+.colour-section a,
+.colour-section span { color: #fff;}
+
+.light-section p,
+.light-section li { color: #aaa;}
+
+.light-section h1,
+.grey-section h1,
+.light-section h2,
+.grey-section h2,
+.light-section h3,
+.grey-section h3,
+.light-section h4,
+.grey-section h4,
+.light-section h5,
+.grey-section h5,
+.light-section strong,
+.grey-section strong { color: #aaa;}
+
+/*========== Buttons ==========*/
+.btn { letter-spacing: 2px; font-weight: 600; padding: 7px 15px;}
+.btn-colour,
+.btn-colour:hover { color: #fff;}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Shortcodes
+  ***************************************************************************
+=============================================================================*/
+
+
+/*========== Icons ==========*/
+
+  /*========== Icon Module 1 ==========*/
+  .icon-module-1 { margin-bottom: 50px; }
+  .icon-module-1 h4 { margin: 0 0 20px 0;}
+  .icon-1 { display: inline-block; margin-bottom: 30px;}
+  .icon-1 span { font-size: 36px; display: block; width: 70px; height: 70px; line-height: 70px; border-radius: 5px; border: 1px solid #191919; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out;}
+
+  
+  /*========== Icon Module 2 ==========*/
+  .icon-module-2 { padding: 50px 10px;}
+  .icon-module-2 .icon-2 { margin-bottom: 22px;}
+  .icon-module-2 .icon-2 span { font-size: 60px;}
+  .icon-module-2 h4 { margin: 0 0 20px 0;}
+
+
+  /*========== Icon Module 3 ==========*/
+  .icon-module-3 { margin: 0 0 40px 0;}
+  .icon-module-3 i { font-size: 60px; margin-bottom: 15px;}
+
+
+/*========== Social Icons ==========*/
+
+.social-icon { width: 40px; height: 40px; line-height: 40px; margin: 5px; font-size: 18px; border-radius: 50%; border: 1px solid #aaa; color: #aaa; -webkit-transition: all 0.2s ease-in-out; -moz-transition: all 0.2s ease-in-out; -ms-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out;}
+.social-icon:hover { color: #aaa;}
+.social-icon:focus { color: #aaa;}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Parallax Backgrounds
+  ***************************************************************************
+=============================================================================*/
+
+.parallax { background-repeat: no-repeat; position: relative; overflow: hidden; background-position: center center; }
+section.parallax.fixed { background-attachment: fixed !important; height: 100% !important;}
+
+
+@media (max-width: 1199px) {
+.parallax { -webkit-background-size: cover; -moz-background-size: cover; -ms-background-size: cover; -o-background-size: cover; background-size: cover;}
+}
+
+
+/*========== 
+
+            ADD YOUR PARALLAX BACKGROUND IMAGES HERE
+
+                                                          ==========*/
+
+.parallax1 { background-image: url('../images/banner.jpg');}
+.parallax2 { background-image: url('../images/parallax-bg.jpg');}
+.parallax3 { background-image: url('../images/parallax-bg.jpg');}
+.parallax4 { background-image: url('../images/parallax-bg.jpg');}
+.parallax5 { background-image: url('../images/parallax-bg.jpg');}
+.parallax6 { background-image: url('../images/parallax-bg.jpg');}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Headers
+  ***************************************************************************
+=============================================================================*/
+
+.header { position: relative; display: table; width: 100%;}
+.header .header-container { display: table-cell; vertical-align: middle; width: 100%; height: 100%; margin: 0 auto; z-index: 2000; position: relative;}
+.header .intro { padding: 0 20px;}
+.header .intro p { font-size: 32px; margin: 0 0 20px 0; line-height: 32px;}
+.header .intro h1 { font-size: 16px; margin: 0 0 20px 0; line-height: 22px;}
+
+
+
+
+.header { position: relative; display: table; width: 100%;}
+.header .header-container { display: table-cell; vertical-align: middle; width: 100%; height: 100%; margin: 0 auto; z-index: 2000; position: relative;}
+.header .intro { padding: 0 20px;}
+.header .intro p { font-size: 32px; margin: 0 0 20px 0; line-height: 32px;}
+.header .intro h1 { font-size: 16px; margin: 0 0 20px 0; line-height: 22px;}
+
+
+.navbar { z-index: 9999; background: #222; margin: 0;}
+.navbar li { margin-bottom: 5px;}
+
+/*.navbar { border-color: #CC215A;}*/
+.navbar { border-color: #222; min-height: 61px;}
+.navbar .navbar-collapse { border-color: #222;}
+.navbar .navbar-toggle { border-color: #CC215A;margin-top: 12px;}
+.navbar .navbar-toggle .icon-bar { background-color: #CC215A; }
+.navbar .navbar-toggle:hover, .navbar-default .navbar-toggle:focus { background-color: #222; }
+
+
+.navbar-brand.image-logo { padding-top: 4px; padding-bottom: 0;}
+.navbar-brand.image-logo img { display: block; max-width: 250px;}
+
+
+@media (min-width: 768px) {
+  .navbar-brand.image-logo { padding-top: 6px;}
+  .navbar li { font-size: 14px; margin: 0;}
+  .navbar-nav > li > a { padding-top: 20px; padding-bottom: 20px; line-height: 21px;color: #aaa !important;}
+  .navbar-brand { padding-top: 20px; padding-bottom: 20px;}
+}
+
+
+@media (min-width: 992px) {
+  .navbar li { font-size: 14px;}
+}
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Section Headers
+  ***************************************************************************
+=============================================================================*/
+
+.section-header { margin-bottom: 80px;}
+.section-header.no-marg { margin-bottom: 0;}
+.section-header h2 { margin: 0 0 14px 0;}
+.section-header.no-marg h2 { margin: 0 0 20px 0;}
+.section-header p { font-size: 16px; margin: 0;}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Skills Sections
+  ***************************************************************************
+=============================================================================*/
+
+.skills .skills-module { margin-bottom: 50px;}
+.skills .chart { width: 120px; height: 120px; margin: 0 auto; position: relative;}
+.skills .skill-percent { width: 120px; height: 120px; position: absolute; font-size: 20px; color: #fff; margin-top: 45px;}
+.skills .skill-percent:after { content: '%'; font-size: 20px;}
+.skills .skills-module h4 { margin-bottom: 20px;}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Team Sections
+  ***************************************************************************
+=============================================================================*/
+
+.team .team-border { border-bottom: 1px solid #191919;}
+.team .team-module { padding: 50px 0;}
+.team .team-photo img { border-radius: 50%; display: block; margin: 0 auto 20px auto; width: 180px;}
+.team .team-social a { width: 36px; height: 36px; line-height: 36px; display: inline-block; border-radius: 50%; border: 1px solid #aaa; color: #aaa; margin: 0 2px 10px 2px;}
+.team .team-desc p { margin: 0;}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Services Sections
+  ***************************************************************************
+=============================================================================*/
+
+.services .services-border { border-bottom: 1px solid rgba(255,255,255,0.3);}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Portfolio Section
+  ***************************************************************************
+=============================================================================*/
+.portfolio .cbp img, 
+.portfolio .cbp-popup-singlePage img { height: 100%;}
+.portfolio .cbp-l-caption-body .cbp-l-caption-title { margin-bottom: 20px; position: relative;}
+.portfolio .cbp-l-caption-body .cbp-link-wrap { display: block;}
+.portfolio .cbp-l-caption-body a { display: inline-block; color: #fff; border: 2px solid #fff; margin-bottom: 10px; padding: 7px 12px; border-radius: 3px;}
+.portfolio .cbp-title-border { width: 30px; height: 1px; background: #fff; margin: 0 auto 20px auto;}
+.portfolio .cbp-l-filters-alignCenter .cbp-filter-item,
+.portfolio .cbp-l-loadMore-button a { padding: 7px 12px; border: 2px solid #191919; background: #191919; border-radius: 3px; font-weight: bold; margin: 5px;}
+.portfolio .cbp-l-filters-alignCenter .cbp-filter-item.cbp-filter-item-active { color: #fff;}
+.portfolio .cbp-l-filters-alignCenter .cbp-filter-item.cbp-filter-item-active:hover { color: #fff;}
+
+.cbp-popup-singlePage .cbp-popup-content { width: 100%; max-width: 100%; margin: 0;}
+.cbp-popup-singlePage .cbp-popup-navigation-wrap { height: 70px; background: transparent; z-index: 2000;}
+.cbp-popup-singlePage .cbp-popup-close { background: url('../cubeportfolio/img/cbp-sprite.png') -94px -140px no-repeat; opacity: 0.7; top: 14px;}
+.cbp-popup-singlePage .cbp-popup-prev { background: url('../cubeportfolio/img/cbp-sprite.png') -2px -140px no-repeat; opacity: 0.7; top: 14px;}
+.cbp-popup-singlePage .cbp-popup-next { background: url('../cubeportfolio/img/cbp-sprite.png') -48px -140px no-repeat; opacity: 0.7; top: 14px;}
+.cbp-popup-singlePage .cbp-popup-close:hover,
+.cbp-popup-singlePage .cbp-popup-prev:hover,
+.cbp-popup-singlePage .cbp-popup-next:hover { opacity: 1;}
+.cbp-popup-singlePage-counter { color: #fff; top: -16px;}
+.cbp-popup-singlePage-sticky .cbp-popup-navigation-wrap { position: absolute; }
+
+.cbp-popup-loadingBox { z-index: 2000;}
+
+
+
+/* ========== Single Portfolio Items ========== */
+.single-portfolio { padding: 100px 0; background: #222;}
+.single-portfolio-feature-image { width: 100%; height: 400px; display: table; position: relative;}
+.single-portfolio-heading { display: table-cell; vertical-align: middle; height: 100%; z-index: 2000; position: relative;}
+.single-portfolio-heading h2 { font-size: 35px; margin: 0; color: #fff; padding: 0 10px;}
+
+.single-portfolio p { font-size: 18px; line-height: 1.7; color: #aaa;}
+.single-portfolio p,
+.single-portfolio h1,
+.single-portfolio h2,
+.single-portfolio h3,
+.single-portfolio h4,
+.single-portfolio h5,
+.single-portfolio h6 { margin: 0 0 20px 0; color: #aaa;}
+.single-portfolio img { margin: 50px auto; display: block;}
+
+.single-portfolio-footer { border-top: 1px solid #191919; background: #222;}
+.single-portfolio-footer h2 { color: #aaa;}
+.single-portfolio-footer .site-link { margin-top: 60px;}
+
+.single-portfolio-service-module { padding: 50px 10px;}
+.single-portfolio-service-module .sps-icon { margin-bottom: 22px;}
+.single-portfolio-service-module .sps-icon span { font-size: 60px;}
+.single-portfolio-service-module h4 { margin: 0 0 20px 0; color: #aaa;}
+.single-portfolio-feature-image { position: relative; background-repeat: no-repeat; background-position: center center; -webkit-background-size: cover; -moz-background-size: cover; -ms-background-size: cover; -o-background-size: cover; background-size: cover;}
+
+
+  /* ===== Project 1 ===== */
+  .project1 { background-image: url('../cubeportfolio/img/projects/single-portfolio-feature-image.jpg');}
+  
+  /* ===== Project 2 ===== */
+  .project2 { background-image: url('../cubeportfolio/img/projects/single-portfolio-feature-image.jpg');}
+
+  /* ===== Project 3 ===== */
+  .project3 { background-image: url('../cubeportfolio/img/projects/single-portfolio-feature-image.jpg');}
+
+  /* ===== Project 4 ===== */
+  .project4 { background-image: url('../cubeportfolio/img/projects/single-portfolio-feature-image.jpg');}
+
+  /* ===== Project 5 ===== */
+  .project5 { background-image: url('../cubeportfolio/img/projects/single-portfolio-feature-image.jpg');}
+
+  /* ===== Project 6 ===== */
+  .project6 { background-image: url('../cubeportfolio/img/projects/single-portfolio-feature-image.jpg');}
+
+  /* ===== Project 7 ===== */
+  .project7 { background-image: url('../cubeportfolio/img/projects/single-portfolio-feature-image.jpg');}
+
+  /* ===== Project 8 ===== */
+  .project8 { background-image: url('../cubeportfolio/img/projects/single-portfolio-feature-image.jpg');}
+
+  /* ===== Project 9 ===== */
+  .project9 { background-image: url('../cubeportfolio/img/projects/single-portfolio-feature-image.jpg');}
+
+  /* ===== Project 10 ===== */
+  .project10 { background-image: url('../cubeportfolio/img/projects/single-portfolio-feature-image.jpg');}
+
+  /* ===== Project 11 ===== */
+  .project11 { background-image: url('../cubeportfolio/img/projects/single-portfolio-feature-image.jpg');}
+
+  /* ===== Project 12 ===== */
+  .project12 { background-image: url('../cubeportfolio/img/projects/single-portfolio-feature-image.jpg');}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  CTA Section
+  ***************************************************************************
+=============================================================================*/
+.cta { color: #fff; display: block; font-size: 40px; padding: 80px 10px; font-weight: 300; line-height: 50px; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -ms-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear;}
+.cta:hover { color: #fff;}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Pricing Table Section
+  ***************************************************************************
+=============================================================================*/
+.pricing-module { background: #282727; padding: 40px 20px; border-radius: 5px; border: 1px solid #191919; margin: 0 0 40px 0; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -ms-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear;}
+.pricing-module span { display: block;}
+.pricing-module.popular-price { -webkit-transform: scale(1.05); -moz-transform: scale(1.05); -ms-transform: scale(1.05); -o-transform: scale(1.05); transform: scale(1.05); }
+.pricing-module .price { font-size: 50px; margin: 0 0 10px 0; font-weight: 400; line-height: 55px;}
+.pricing-module .price sup { font-size: 60%; margin-right: -10px;}
+.pricing-module .price small { font-size: 60%; margin-left: -10px;}
+
+.pricing-module .price-title { font-size: 20px; margin: 0 0 10px 0;}
+.pricing-module .price-desc { display: block;}
+.pricing-module ul { margin: 50px 0;}
+.pricing-module li { color: #898989; display: block; font-weight: 600; font-size: 14px; margin: 0 0 10px 0;}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Testimonials Section
+  ***************************************************************************
+=============================================================================*/
+
+.testimonials-module i { display: block; font-size: 20px; margin: 0 0 30px 0; color: #fff;}
+.testimonials-module .testimonials-icon { background: rgba(0,0,0,0.3); display: inline-block; width: 90px; height: 90px; border-radius: 50%; margin: 0 0 30px 0;}
+.testimonials-module .testimonials-icon span { font-size: 50px; color: #fff; height: 110px; line-height: 90px;}
+.testimonials-module .testimonials-author { color: #fff; font-style: italic; font-size: 18px; margin-bottom: 30px;}
+
+.testimonials .owl-theme .owl-controls { margin-top: 10px; text-align: center; }
+.testimonials .owl-theme .owl-controls .owl-buttons div { color: #fff; display: inline-block; zoom: 1; margin: 5px; padding: 3px 10px; font-size: 12px; border-radius: 30px; background: #eee; opacity: 0.5; }
+.testimonials .owl-theme .owl-controls.clickable .owl-buttons div:hover{ opacity: 1; text-decoration: none; }
+.testimonials .owl-theme .owl-controls .owl-page{ display: inline-block; zoom: 1; }
+.testimonials .owl-theme .owl-controls .owl-page span{ display: block; width: 12px; height: 12px; margin: 5px 7px; opacity: 0.5; border-radius: 20px; background: #fff; }
+.testimonials .owl-theme .owl-controls .owl-page.active span,
+.testimonials .owl-theme .owl-controls.clickable .owl-page:hover span{ opacity: 1; }
+.testimonials .owl-theme .owl-controls .owl-page span.owl-numbers{ height: auto; width: auto; color: #FFF; padding: 2px 10px; font-size: 12px; border-radius: 30px;}
+.owl-item.loading{ min-height: 150px; background: url(AjaxLoader.gif) no-repeat center center }
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Clients Section
+  ***************************************************************************
+=============================================================================*/
+
+.clients div img { display: block; width: 50%; margin: 0 auto; opacity: 0.6; -webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease; -ms-transition: all 0.2s ease; -o-transition: all 0.2s ease; transition: all 0.2s ease;}
+.clients div img:hover { opacity: 1;}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Company Stats Section
+  ***************************************************************************
+=============================================================================*/
+
+.company-stats-module { margin: 0 0 40px 0;}
+.company-stats-module .company-stats-icon { background: rgba(0,0,0,0.3); display: inline-block; width: 110px; height: 110px; border-radius: 50%;}
+.company-stats-module .company-stats-icon span { font-size: 50px; color: #fff; height: 110px; line-height: 110px;}
+.company-stats-module .company-stats-amount span { font-size: 50px; display: block; margin: 10px 0 5px 0; font-weight: 300;}
+.company-stats-module p { margin: 0; font-size: 16px;}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Twitter Feed Section
+  ***************************************************************************
+=============================================================================*/
+.twitter-feed-module .twitter-icon { margin: 0 0 30px 0;}
+.twitter-feed-module .twitter-icon span { font-size: 80px;}
+.twitter-feed-module .tweet p { font-size: 20px; line-height: 32px; font-style: italic;}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Contact Section
+  ***************************************************************************
+=============================================================================*/
+
+.contact input,
+.contact textarea { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.3); max-width: 100%; width: 100%; padding: 20px; margin: 0 0 40px 0; border-radius: 3px; -webkit-transition: border 1s; -moz-transition: border 1s; -ms-transition: border 1s; -o-transition: border 1s; transition: border 1s;}
+.contact textarea { min-height: 200px;}
+.contact .form-submit input { text-transform: uppercase; font-weight: 600; letter-spacing: 2px; }
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Our-offices Section
+  ***************************************************************************
+=============================================================================*/
+
+.our-offices .tel { margin: 0 0 20px 0;}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Google Map div
+  ***************************************************************************
+=============================================================================*/
+
+#google-map { width: auto; height: 300px;}
+#google-map img { max-width: none;}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Footer Section
+  ***************************************************************************
+=============================================================================*/
+
+.footer-logo p { font-size: 24px; margin: 0 0 20px 0;}
+.footer-logo img { display: none; }
+.footer-logo.with-img img { display: block; margin: 0 auto 20px auto; width: 200px;}
+.footer-logo.with-img p { display: none;}
+.footer .social-links { margin-top: 30px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*====================================================================================================================
+  ******************************************************************************************************************
+  MEDIA QUERIES
+  ******************************************************************************************************************
+====================================================================================================================*/
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  768px Media Query
+  ***************************************************************************
+=============================================================================*/
+
+@media (min-width: 768px) {
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Header
+  ***************************************************************************
+=============================================================================*/
+
+.header .intro p { font-size: 50px; line-height: 50px;}
+.header .intro h1 { font-size: 20px; margin-bottom: 30px;}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Section Headers
+  ***************************************************************************
+=============================================================================*/
+
+.section-header h2 { font-size: 35px;}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Team Sections
+  ***************************************************************************
+=============================================================================*/
+
+.team .team-border { border-bottom: none;}
+.team .team-bb-rb { border-bottom: 1px solid #191919; border-right: 1px solid #191919;}
+.team .team-bb { border-bottom: 1px solid #191919;}
+.team .team-rb { border-right: 1px solid #191919;}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Services Sections
+  ***************************************************************************
+=============================================================================*/
+
+.services .services-border { border-bottom: none;}
+.services .services-bb-rb { border-bottom: 1px solid rgba(255,255,255,0.3); border-right: 1px solid rgba(255,255,255,0.3);}
+.services .services-bb { border-bottom: 1px solid rgba(255,255,255,0.3);}
+.services .services-rb { border-right: 1px solid rgba(255,255,255,0.3);}
+
+
+
+
+
+
+
+
+
+
+} /*========== 768px MEDIA QUERY END ==========*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  992px Media Query
+  ***************************************************************************
+=============================================================================*/
+
+@media (min-width: 992px) {
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Global
+  ***************************************************************************
+=============================================================================*/
+
+/*========== Sections ==========*/
+/*.section-pad { padding: 125px 0;}*/
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Shortcodes
+  ***************************************************************************
+=============================================================================*/
+
+/*========== Icons ==========*/
+.icon-module-1 .icon-1,
+.icon-module-2-hover,
+.icon-2 span,
+.icon-module-3-hover i { -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -ms-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear;}
+
+.icon-module-1:hover .icon-1,
+.icon-module-2-hover:hover .icon-2 span,
+.social-icon:hover,
+.icon-module-3-hover:hover i { -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); -o-transform: rotate(360deg); transform: rotate(360deg);}
+
+.icon-module-2-hover:hover .icon-2 span { color: #fff;}
+.icon-module-3 { margin: 0;}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Headers
+  ***************************************************************************
+=============================================================================*/
+
+.header .intro p { font-size: 70px; line-height: 70px;}
+.header .intro h1 { font-size: 22px;}
+
+.overlay-nav li a { font-size: 34px; padding: 10px 0;}
+.overlay-nav .close-nav span { font-size: 80px;}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  CTA Section
+  ***************************************************************************
+=============================================================================*/
+.cta p { margin-bottom: 0;}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Company Stats Section
+  ***************************************************************************
+=============================================================================*/
+.company-stats-module { margin: 0;}
+
+
+
+
+
+
+
+
+
+
+} /*========== 992px MEDIA QUERY END ==========*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+	1200px Media Query
+  ***************************************************************************
+=============================================================================*/
+
+
+@media (min-width: 1200px) {
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Team Sections
+  ***************************************************************************
+=============================================================================*/
+
+.team .team-photo { width: 220px; height: 220px; margin: 0 auto 20px auto; position: relative; }
+.team .team-photo img { width: 220px; height: 220px; margin: 0;}
+.team .team-social { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); border-radius: 50%; padding: 97px 0; opacity: 0; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -ms-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear;}
+.team .team-social a { color: #fff; border: 1px solid #fff;}
+.team .team-hover { -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -ms-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear;}
+.team .team-hover:hover .team-social { -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); -o-transform: rotate(360deg); transform: rotate(360deg); opacity: 1;}
+.team .team-hover:hover { background: #191919;}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  CTA Section
+  ***************************************************************************
+=============================================================================*/
+
+.cta a:hover { background: #fff; -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -ms-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear;}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Testimonials Section
+  ***************************************************************************
+=============================================================================*/
+
+.testimonials-item .testimonials-icon { -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -ms-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear;}
+.testimonials-item:hover .testimonials-icon { -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); -o-transform: rotate(360deg); transform: rotate(360deg);}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Company Stats Section
+  ***************************************************************************
+=============================================================================*/
+
+.company-stats-module .company-stats-icon { -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -ms-transition: all 0.2s linear; -o-transition: all 0.2s linear; transition: all 0.2s linear;}
+.company-stats-module:hover .company-stats-icon { -webkit-transform: rotate(360deg); -moz-transform: rotate(360deg); -ms-transform: rotate(360deg); -o-transform: rotate(360deg); transform: rotate(360deg);}
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Google Map div
+  ***************************************************************************
+=============================================================================*/
+
+#google-map { width: auto; height: 500px;}
+
+
+
+
+
+
+
+
+
+
+} /*========== 1200px MEDIA QUERY END ==========*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*=============================================================================
+  ***************************************************************************
+  Theme Colours
+  ***************************************************************************
+=============================================================================*/
+
+
+/*========== Buttons ==========*/
+.btn-colour { background-color: #cd225b; border-color: #cd225b;}
+.btn-colour:hover,
+.btn-colour:focus,
+.btn-colour:active,
+.btn-colour.active { background-color: #cd225b; border-color: #cd225b; }
+.btn-colour.disabled:hover,
+.btn-colour.disabled:focus,
+.btn-colour.disabled:active,
+.btn-colour.disabled.active,
+.btn-colour[disabled]:hover,
+.btn-colour[disabled]:focus,
+.btn-colour[disabled]:active,
+.btn-colour[disabled].active,
+fieldset[disabled] .btn-colour:hover,
+fieldset[disabled] .btn-colour:focus,
+fieldset[disabled] .btn-colour:active,
+fieldset[disabled] .btn-colour.active { background-color: #cd225b; border-color: #cd225b;}
+
+
+/*========== Alert ==========*/
+.alert.alert-custom { background: #cd225b; color: #fff; font-weight: bold;}
+
+
+/*========== Font colours ==========*/
+.colour,
+a { color: #cd225b;}
+a:hover { color: #ae1d4e;}
+a:focus { color: #ae1d4e;}
+
+
+/*========== Colour section ==========*/
+.colour-section { background: #cd225b;}
+
+
+/*========== Loader ==========*/
+.loader { border: 4px solid #cd225b;}
+.loader-fill { background: #cd225b;}
+/*.loader { border: 4px solid #03a9f4;}
+.loader-fill { background: #03a9f4;}*/
+
+
+/*========== Icons ==========*/
+
+  /*========== Icon Module 1 ==========*/
+  .icon-1 span { color: #cd225b;}
+  @media (min-width: 992px) {
+  .icon-module-1:hover span { color: #fff; background: #cd225b; border: 1px solid #cd225b;}
+  }
+
+
+  /*========== Icon Module 2 ==========*/
+  .icon-module-2 span { color: #cd225b;}
+  @media (min-width: 992px) {
+  .icon-module-2-hover:hover { background: #cd225b;}
+  }
+
+
+  /*========== Icon Module 3 ==========*/
+  .icon-module-3 i { color: #cd225b;}
+
+
+
+/*========== Social Icons ==========*/
+@media (min-width: 992px) {
+.social-icon:hover { color: #cd225b; border: 1px solid #cd225b;}
+}
+
+
+/*========== Navigation ==========*/
+.overlay-nav { background-color: rgba(3, 169, 244, 0.9); }
+
+.open-nav a { border-top: 2px solid #cd225b;}
+.open-nav a:before,
+.open-nav a:after { background: #cd225b;}
+
+
+/*========== Team Section ==========*/
+
+@media (min-width: 1200px) {
+.team .team-social a:hover { color: #cd225b; border: 1px solid #cd225b;}
+}
+
+
+/*========== Portfolio Section ==========*/
+
+.portfolio .cbp-l-caption-body a:hover,
+.portfolio .cbp-l-loadMore-button a:hover { color: #cd225b; border: 2px solid #cd225b;}
+.portfolio .cbp-l-filters-alignCenter .cbp-filter-item.cbp-filter-item-active { background: #cd225b; border: 2px solid #cd225b;}
+.portfolio .cbp-l-filters-alignCenter .cbp-filter-item:hover { color: #cd225b; border: 2px solid #cd225b;}
+.single-portfolio-service-module .sps-icon span { color: #cd225b;}
+
+
+/*========== CTA Section ==========*/
+
+.cta { background: #cd225b;}
+@media (min-width: 1200px) {
+.cta:hover { background: #ae1d4e;}
+}
+
+
+/*========== Testimonials Section ==========*/
+
+@media (min-width: 1200px) {
+.testimonials-item:hover .testimonials-icon span { color: #cd225b;}
+}
+
+
+/*========== Pricing Tables ==========*/
+
+.pricing-module .price { color: #cd225b;}
+.pricing-module.popular-price .price-desc { color: #cd225b; text-transform: uppercase;}
+
+
+
+/*========== Company Stats ==========*/
+
+.company-stats-module .company-stats-amount span { color: #cd225b;}
+
+@media (min-width: 1200px) {
+.company-stats-module:hover .company-stats-icon { background: #cd225b; }
+}
+
+
+/*========== Twitter Feed ==========*/
+
+.twitter-feed-module .twitter-icon span { color: #cd225b;}
+
+
+/*========== Contact Section ==========*/
+
+.contact .form-submit input { background: #cd225b; border: 1px solid #cd225b; text-transform: uppercase; font-weight: bold;}
+.contact .form-submit input:hover { background: #ae1d4e;}
+.contact input:focus,
+.contact textarea:focus { border: 1px solid #cd225b;}
+
